@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.24)
+
+set(APP_NAME "HelloWorldWxWidgets")
+
+project("${APP_NAME}-package")
+
+set(CMAKE_CXX_STANDARD 17)
+
+set(COMPANY_NAME AlexBychek)
+
+set(PACKAGE_VERSION_MAJOR "0")
+set(PACKAGE_VERSION_MINOR "0")
+set(PACKAGE_VERSION_PATCH "1")
+set(PACKAGE_VERSION_STRING "${PACKAGE_VERSION_MAJOR}.${PACKAGE_VERSION_MINOR}.${PACKAGE_VERSION_PATCH}")
+
+add_definitions(-D__APP_VERSION_STRING="${PACKAGE_VERSION_STRING}")
+
+add_subdirectory(app)
